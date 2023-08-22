@@ -49,6 +49,7 @@ class WebTest {
         String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
     }
+
     @Test
     void shouldTestName() {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Serega");
@@ -58,6 +59,7 @@ class WebTest {
         String text = driver.findElement(By.cssSelector("[data-test-id=name].input_invalid .input__sub")).getText();
         assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", text.trim());
     }
+
     @Test
     void shouldTestName1() {
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+71112223344");
@@ -66,6 +68,7 @@ class WebTest {
         String text = driver.findElement(By.cssSelector("[data-test-id=name].input_invalid .input__sub")).getText();
         assertEquals("Поле обязательно для заполнения", text.trim());
     }
+
     @Test
     void shouldTestPhone() {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Петров Никита");
@@ -74,6 +77,7 @@ class WebTest {
         String text = driver.findElement(By.cssSelector("[data-test-id=phone].input_invalid .input__sub")).getText();
         assertEquals("Поле обязательно для заполнения", text.trim());
     }
+
     @Test
     void shouldTestPhone1() {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Петров Никита");
